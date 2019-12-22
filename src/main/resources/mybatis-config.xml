@@ -5,11 +5,11 @@
 <configuration>
     <typeAliases>
 <!--     把com.jiago.mybatis.pojo.User定义别名user这样mapper文件resultType直接使用user就行不用写包路径-->
-        <typeAlias type="com.jiago.mybatis.pojo.User" alias="user"/>
+        <typeAlias type="com.lzj.jdbcandmybatis.mybatis.pojo.User" alias="user"/>
     </typeAliases>
     <plugins>
         <!--        日志拦截器插件-->
-        <plugin interceptor="com.jiago.mybatis.plugin.SqlPrintInterceptor"></plugin>
+        <plugin interceptor="com.lzj.jdbcandmybatis.mybatis.plugin.SqlPrintInterceptor"></plugin>
     </plugins>
     <environments default="development">
         <environment id="development">
@@ -26,7 +26,7 @@
 <!--        mybatis运行时读取UserMapper.xml文件-->
         <mapper resource="mybatis/UserMapper.xml"/>
 <!--        mybatis运行时读取UserMapper的class-->
-        <mapper class="com.jiago.mybatis.mapper.UserMapper"/>
+        <mapper class="com.lzj.jdbcandmybatis.mybatis.mapper.UserMapper"/>
 <!--        mybatis运行时读取com.jiago.mybatis.mapper的全部class-->
 <!--        <package name="com.jiago.mybatis.mapper"/>-->
     </mappers>

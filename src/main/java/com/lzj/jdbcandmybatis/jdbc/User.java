@@ -1,4 +1,4 @@
-package com.jiago.jdbc;
+package com.lzj.jdbcandmybatis.jdbc;
 
 import java.io.Serializable;
 import java.util.StringJoiner;

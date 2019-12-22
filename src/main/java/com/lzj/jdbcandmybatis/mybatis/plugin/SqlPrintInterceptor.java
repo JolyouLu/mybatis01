@@ -1,4 +1,4 @@
-package com.jiago.mybatis.plugin;
+package com.lzj.jdbcandmybatis.mybatis.plugin;
 
 import org.apache.ibatis.mapping.BoundSql;
 import org.apache.ibatis.mapping.MappedStatement;

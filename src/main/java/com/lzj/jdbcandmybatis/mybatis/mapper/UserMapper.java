@@ -1,6 +1,6 @@
-package com.jiago.mybatis.mapper;
+package com.lzj.jdbcandmybatis.mybatis.mapper;
 
-import com.jiago.mybatis.pojo.User;
+import com.lzj.jdbcandmybatis.mybatis.pojo.User;
 import org.apache.ibatis.annotations.Select;
 
 /**

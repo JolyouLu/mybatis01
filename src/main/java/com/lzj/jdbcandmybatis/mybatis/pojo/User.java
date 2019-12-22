@@ -1,4 +1,4 @@
-package com.jiago.mybatis.pojo;
+package com.lzj.jdbcandmybatis.mybatis.pojo;
 
 import java.io.Serializable;
 import java.util.StringJoiner;

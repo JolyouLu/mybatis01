@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mapper namespace="jdbcandmybatis.mysqlutil.mapper.UserMapper">
+    <select id="getUser" resultType="com.lzj.jdbcandmybatis.mybatis.pojo.User">
+    select * from user where id = %d
+  </select>
+</mapper>

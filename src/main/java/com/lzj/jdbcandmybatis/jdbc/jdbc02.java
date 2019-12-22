@@ -1,6 +1,5 @@
-package com.jiago.jdbc;
+package com.lzj.jdbcandmybatis.jdbc;
 
-import javax.swing.text.html.MinimalHTMLWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

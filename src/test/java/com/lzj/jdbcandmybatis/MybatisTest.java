@@ -1,7 +1,7 @@
-package com.jiago.com;
+package com.lzj.jdbcandmybatis;
 
-import com.jiago.mybatis.mapper.UserMapper;
-import com.jiago.mybatis.pojo.User;
+import com.lzj.jdbcandmybatis.mybatis.mapper.UserMapper;
+import com.lzj.jdbcandmybatis.mybatis.pojo.User;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;

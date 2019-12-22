@@ -1,4 +1,4 @@
-package com.jiago.jdbc;
+package com.lzj.jdbcandmybatis.jdbc;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

@@ -1,4 +1,4 @@
-package com.jiago.jdbc;
+package jdbcandmybatis.mysqlutil.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
