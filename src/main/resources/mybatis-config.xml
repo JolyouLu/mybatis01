@@ -24,7 +24,7 @@
     </environments>
     <mappers>
 <!--        mybatis运行时读取UserMapper.xml文件-->
-        <mapper resource="testMybatis/UserMapper.xml"/>
+<!--        <mapper resource="testMybatis/UserMapper.xml"/>-->
 <!--        mybatis运行时读取UserMapper的class-->
         <mapper class="com.lzj.test.mybatis.mybatis.mapper.UserMapper"/>
 <!--        mybatis运行时读取com.jiago.mybatis.mapper的全部class-->

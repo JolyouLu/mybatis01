@@ -25,8 +25,8 @@ public class MybatisTest {
         InputStream inputStream = Resources.getResourceAsStream(resource);
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
         SqlSession sqlSession = sqlSessionFactory.openSession();
-        //com.jiago.mybatis.UserMapper.selectUser  UserMapper.xml下的id为selectUser的语句
-        User user = sqlSession.selectOne("com.jiago.mybatis.UserMapper.selectUser", 1);
+        //com.lzj.test.mybatis.mybatis.mapper.UserMapper  UserMapper.xml下的id为selectUser的语句
+        User user = sqlSession.selectOne("com.lzj.test.mybatis.mybatis.mapper.UserMapper.selectUser", 1);
         System.out.println("查询结果："+user);
     }
 
