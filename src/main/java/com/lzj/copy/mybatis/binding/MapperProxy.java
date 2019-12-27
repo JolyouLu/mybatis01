@@ -22,8 +22,10 @@ public class MapperProxy<T> implements InvocationHandler {
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+        //获取Configuration中的MapperRegistry注册中心 通过id到KnownMappers中对于的mapperMethod对象
         MapperMethod mapperMethod = sqlSession.getConfiguration().getMapperRegistry().getKnownMappers().get(method.getDeclaringClass().getName()+"."+method.getName());
         if (null != mapperMethod){
+            //调用selectOne方法把mapperMethod传进去和需要的参数
             return sqlSession.selectOne(mapperMethod,String.valueOf(args[0]));
         }
         return method.invoke(proxy,args);

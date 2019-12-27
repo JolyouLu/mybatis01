@@ -18,7 +18,7 @@ public class SimpleExecutor implements Executor {
         this.configuration = configuration;
     }
 
-    @Override
+    @Override //实现Executor接口 中的query方法
     public <T> T query(MapperMethod method, Object parameter) throws Exception {
         StatementHandler statementHandler = new StatementHandler(configuration);
         return statementHandler.query(method,parameter);

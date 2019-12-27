@@ -21,6 +21,7 @@ import java.util.Map;
  */
 public class Configuration {
     private InputStream inputStream;
+    //new一个MapperRegistry 把从Configuration加载的mapper添加到MapperRegistry中
     MapperRegistry mapperRegistry = new MapperRegistry();
 
     /*通过Dom4j读取配置文件信息*/
@@ -58,11 +59,16 @@ public class Configuration {
             Document document = new SAXReader().read(is);
             Element root = document.getRootElement();
             if (root.getName().equalsIgnoreCase("mapper")){
+                //获取namespace中的值
                 String namespace = root.attribute("namespace").getText();
+                //遍历获取xml下的全部 sql和返回值类型 put到map中
                 for (Element select:(List<Element>) root.elements("select")){
                     MapperMethod mapperMethod = new MapperMethod();
+                    //获取sql语句
                     mapperMethod.setSql(select.getText().trim());
+                    //获取返回值类型
                     mapperMethod.setType(Class.forName(select.attribute("resultType").getText()));
+                    //namespace+id+mapperMethod 存入到map中一级缓存的时候 如果有重复的namespace+id+mapperMethod的sql语句不访问数据库直接返回参数
                     map.put(namespace+"."+select.attribute("id").getText(),mapperMethod);
                 }
             }

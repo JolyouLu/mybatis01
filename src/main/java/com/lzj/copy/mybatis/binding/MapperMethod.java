@@ -4,10 +4,12 @@ package com.lzj.copy.mybatis.binding;
  * @Author: LZJ
  * @Date: 2019/12/22 21:07
  * @Version 1.0
- * 把解析的sql加载到这个类中（userMapper.xml）
+ * 用于存放sql语句和返回值类型的类
  */
 public class MapperMethod<T> {
+    //sql语句
     private String sql;
+    //返回的类
     private Class<T> type;
 
     public MapperMethod() {
