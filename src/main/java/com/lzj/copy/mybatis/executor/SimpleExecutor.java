@@ -20,7 +20,9 @@ public class SimpleExecutor implements Executor {
 
     @Override //实现Executor接口 中的query方法
     public <T> T query(MapperMethod method, Object parameter) throws Exception {
+        //创建数据库查询的真正的类
         StatementHandler statementHandler = new StatementHandler(configuration);
+        //调用query方法
         return statementHandler.query(method,parameter);
     }
 }
